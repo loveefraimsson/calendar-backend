@@ -1,0 +1,28 @@
+[
+  {
+    "deadline": "2021-10-13",
+    "title": "Diska",
+    "done": "false"
+  },
+  {
+    "deadline": "2021-09-18",
+    "title": "Städa",
+    "done": "false"
+  },
+  {
+    "deadline": "2021-09-15",
+    "title": "Dammsuga",
+    "done": "true"
+  },
+  {
+    "deadline": "2021-11-20",
+    "title": "Laga mat",
+    "done": "true"
+  },
+  {
+    "deadline": "2021-09-19",
+    "title": "Handla",
+    "done": "false"
+  }
+
+]
