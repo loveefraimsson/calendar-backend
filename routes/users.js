@@ -20,11 +20,14 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.post("/delete", function(req, res) {
-  let title = req.body.title;
-  console.log("Clicked todo: ", title);
 
-  //let title = "Laga mat";
+
+
+
+router.post("/delete", function(req, res) {
+  let clickedId = req.body.id;
+  console.log("Clicked id: ", clickedId);
+
   
 
   fs.readFile("toDoList.json", function(err, data) {
@@ -32,10 +35,14 @@ router.post("/delete", function(req, res) {
       console.log(err);
     }
 
+
+
     let list = JSON.parse(data)
     console.log("all list:", list);
+
+
     
-    let findToDo = list.find((list) => list.title === title);
+    let findToDo = list.find((list) => list.id == clickedId);
     console.log("findToDo", findToDo);
     
     findToDo.done = "true";
@@ -50,11 +57,16 @@ router.post("/delete", function(req, res) {
       res.json({list})
     })
     
-    // res.send(list);
+    //res.send(list);
     
   })
 
 })
+
+
+
+
+
 
 
 
@@ -69,9 +81,23 @@ router.post("/addToDo", function(req, res) {
 
       let list = JSON.parse(data)
       console.log("all list:", list);
+
+      let lastItem = list.slice(-1);
+      let lastItemId = lastItem[0].id
+      console.log("lastItemId", lastItemId);
+
+      let newId = lastItemId + 1;
+      console.log("newId", newId);
+
+
+
       
-      let newToDo = {deadline: incommingToDo.theDeadline , title: incommingToDo.newToDo, done: incommingToDo.done};
+      let newToDo = {id: newId, deadline: incommingToDo.theDeadline , title: incommingToDo.newToDo, done: incommingToDo.done};
       console.log("newToDo", newToDo);
+     
+      
+      
+      
       list.push(newToDo)
       console.log("newList", list);
 

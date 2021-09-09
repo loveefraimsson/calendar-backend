@@ -1,27 +1,50 @@
 [
   {
+    "id": 1,
     "deadline": "2021-10-09",
     "title": "Diska",
     "done": "false"
   },
   {
+    "id": 2,
     "deadline": "2021-09-18",
     "title": "Städa",
-    "done": "false"
+    "done": "true"
   },
   {
+    "id": 3,
     "deadline": "2021-09-15",
     "title": "Dammsuga",
     "done": "false"
   },
   {
+    "id": 4,
     "deadline": "2021-11-20",
     "title": "Laga mat",
-    "done": "true"
+    "done": "false"
   },
   {
+    "id": 5,
     "deadline": "2021-09-19",
     "title": "Handla",
+    "done": "false"
+  },
+  {
+    "id": 6,
+    "deadline": "2021-09-14",
+    "title": "Handla",
+    "done": "false"
+  },
+  {
+    "id": 7,
+    "deadline": "2021-09-22",
+    "title": "Bilbesiktning",
+    "done": "false"
+  },
+  {
+    "id": 8,
+    "deadline": "2021-10-19",
+    "title": "Rensa kylen",
     "done": "false"
   }
 ]
